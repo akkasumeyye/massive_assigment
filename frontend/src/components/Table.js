@@ -1,23 +1,13 @@
 import axios from 'axios'
-import React, {useState,useEffect} from 'react'
 import BootstrapTable from 'react-bootstrap-table-next'
 import paginationFactory from 'react-bootstrap-table2-paginator'
 import filterFactory, { textFilter } from 'react-bootstrap-table2-filter'
+import { useGlobalContext } from './fetchDataContext'
 
 const Table = () => {
-  const [data, setData] = useState([]);
-  const RestURL = "http://localhost:8000/api"
-
-  useEffect(() => {
-    getData();
-  }, []);
-
-  const getData = ()=> {
-    axios(RestURL).then((res)=> {
-      console.log(res.data);
-      setData(res.data)
-    })
-  };
+  const {data} = useGlobalContext();
+  
+};
 
   const columns = [
     {
