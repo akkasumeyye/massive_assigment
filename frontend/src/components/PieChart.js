@@ -23,7 +23,8 @@ const PieChart = () => {
     fetchCases();
   }, []);
 
-//getting data from api
+   //getting classification data from api
+  
   var labelData = Chart?.data.map((x)=>x.classification);
   var getLabels = [...new Set(labelData)];
 
@@ -50,7 +51,6 @@ console.log(percentage)
         label: 'Classification',
         data: 
         percentage,
-        // [10,20,30,40,50],
         backgroundColor: [
           '#9FC088',
           '#E8C07D',
@@ -67,7 +67,7 @@ console.log(percentage)
 
   var options = {
     responsive :true,
-    maintainAspectRatio : false,
+    aspectRatio	:2,
     legend : {
       labels : {
         fontSize : 25 ,
