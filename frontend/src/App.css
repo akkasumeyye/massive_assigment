@@ -54,11 +54,11 @@ Variables
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-  background: var(--clr-grey-10);
-  color: var(--clr-grey-1);
-  line-height: 1.5;
-  font-size: 0.875rem;
+  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important; 
+  background: var(--clr-grey-10) !important;
+  color: var(--clr-grey-1)!important;
+  line-height: 1.5 !important;
+  font-size: 0.875rem !important;
 }
 
 @media screen and (min-width: 800px) {
@@ -68,7 +68,7 @@ body {
   }
   
 }
-/*  global classes */
+
 
 /* section */
 .section {
@@ -96,8 +96,6 @@ body {
   margin-bottom: 4rem;
   text-align: center;
   letter-spacing: var(--spacing);
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  font-weight:bolder;
 }
 
 /*
@@ -167,21 +165,23 @@ Tab Menu
   }
 }
 
+
+
 /* Content Styling*/
 
-.content-tabs {
-  flex-grow : 1;
-}
 .content {
   background: white;
   padding: 20px;
   width: 100%;
   height: 100%;
   display: none;
+  font-size: 1.2rem;
 }
 
 .active-content {
   display: block;
 }
+
+
 
 
