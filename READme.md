@@ -15,3 +15,8 @@ https://user-images.githubusercontent.com/42119724/164894986-c99d2ce9-0d15-4c59-
 
 
 
+Pls use this command to install react bootstrap table :
+npm i react-bootstrap-table-next --save --legacy-peer-deps
+
+
+
