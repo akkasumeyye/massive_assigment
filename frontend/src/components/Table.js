@@ -2,7 +2,7 @@ import axios from 'axios'
 import BootstrapTable from 'react-bootstrap-table-next'
 import paginationFactory from 'react-bootstrap-table2-paginator'
 import filterFactory, { textFilter } from 'react-bootstrap-table2-filter'
-import { useGlobalContext } from './fetchDataContext'
+import { useGlobalContext } from '../components/fetchDataContext'
 
 const Table = () => {
   const {data} = useGlobalContext();
