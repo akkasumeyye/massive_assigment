@@ -34,7 +34,7 @@ class Genetic (BaseModel):
     variant: Optional[str] = None
     gene: Optional[str] = None
     classification :int
-    frequency : float
+    frequency : Optional[float] = None
     
 
 with open ("massive_data.json" , 'r') as f:
