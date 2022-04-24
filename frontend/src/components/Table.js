@@ -7,7 +7,6 @@ import { useGlobalContext } from './fetchDataContext'
 const Table = () => {
   const {data} = useGlobalContext();
   
-};
 
   const columns = [
     {
