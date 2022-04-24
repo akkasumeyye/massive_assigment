@@ -1,7 +1,7 @@
 import {Chart as ChartJS , ArcElement,Tooltip,Legend} from 'chart.js'
 import {Pie} from 'react-chartjs-2'
 import axios from 'axios'
-import { useGlobalContext } from './components/fetchDataContext';
+import { useGlobalContext } from '../components/fetchDataContext';
 
 ChartJS.register(
   ArcElement,
