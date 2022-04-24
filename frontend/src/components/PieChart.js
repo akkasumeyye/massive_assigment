@@ -1,4 +1,3 @@
-import React, {useEffect, useState}  from 'react'
 import {Chart as ChartJS , ArcElement,Tooltip,Legend} from 'chart.js'
 import {Pie} from 'react-chartjs-2'
 import axios from 'axios'
@@ -11,21 +10,12 @@ ChartJS.register(
 
 const PieChart = () => {
 
-  const RestURL = "http://localhost:8000/api"
-  const [Chart, setChart] = useState();
-  
-  useEffect(() => {
-      const fetchCases = async()=> {
-      const res = await axios.get(RestURL)
-      console.log(res);
-      setChart(res)
-          }
-    fetchCases();
-  }, []);
+  const {data} = useGlobalContext();
+
 
    //getting classification data from api
   
-  var labelData = Chart?.data.map((x)=>x.classification);
+  var labelData = data?.map((x)=>x.classification);
   var getLabels = [...new Set(labelData)];
 
 
@@ -44,7 +34,7 @@ var percentage = arr1.map((element)=>{
 
 console.log(percentage)
   
-  var data = {
+  var datam = {
     labels : getLabels,
     datasets: [
       {
@@ -78,7 +68,7 @@ console.log(percentage)
 
   return (
     <Pie
-    data = {data}
+    data = {datam}
     height={400}
     options={options}
     />)
