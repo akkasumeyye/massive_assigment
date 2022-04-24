@@ -31,7 +31,7 @@ const PieChart = () => {
   //percantage calculate   
 
 var counts = {};
-for (var i = 0; i<labelData.length; i++)
+for (var i = 0; i<labelData?.length; i++)
     counts[labelData[i]] = (counts[labelData[i]] + 1) || 1;
     var arr1 = Object.values(counts)
     console.log(arr1);
